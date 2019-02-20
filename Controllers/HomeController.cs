@@ -25,7 +25,7 @@ namespace MRAssignment1.Controllers
             }
             if (command == "Convert to Decimal")
             {
-                model.Result = MRSimpleConversionBL.SimpleConversions.ConvertDecimalToBinary(model.NumberToBeConverted);
+                model.Result = MRSimpleConversionBL.SimpleConversions.ConvertBinaryToDecimal(model.NumberToBeConverted);
                 TempData["result"] = model.Result;
             }
 

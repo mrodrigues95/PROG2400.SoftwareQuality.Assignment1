@@ -42,3 +42,4 @@ function btn4_click() {
 
     document.getElementById('displayTextAsItalics').innerHTML = result;
 }
+

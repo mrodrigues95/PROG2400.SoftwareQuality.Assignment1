@@ -86,7 +86,7 @@
                 @Html.EditorFor(x => x.NumberToBeConverted)<br />
                 <input type="submit" value="Convert to Binary" name="command" />
                 @*<p>@Html.DisplayFor(x => x.Result)</p>*@
-                <p>@TempData["result"]</p>
+                <p>Binary Number: @TempData["result"]</p>
             }
         </div>
     </div>
@@ -105,7 +105,7 @@
                 @Html.EditorFor(x => x.NumberToBeConverted)<br />
                 <input type="submit" value="Convert to Decimal" name="command" />
                 @*<p>@Html.DisplayFor(x => x.Result)</p>*@
-                <p>@TempData["result"]</p>
+                <p>Decimal Number: @TempData["result"]</p>
             }
         </div>
     </div>
