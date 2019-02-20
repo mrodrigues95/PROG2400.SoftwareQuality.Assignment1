@@ -1,4 +1,6 @@
-﻿@{
+﻿@model SimpleConversionViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -67,6 +69,44 @@
             <button type="button" id="btn4" name="btn4" onClick="btn4_click()">Submit</button>
 
             <p id="displayTextAsItalics"></p>
+        </div>
+    </div>
+
+    <!-- User story 7-->
+    <div data-role="collapsible">
+        <h3>User story 7 (D2B)</h3>
+        <div id="story7">
+            @using (Html.BeginForm())
+            {
+                <p>
+                    Use this area to convert any decimal number to a binary number. (D2B)
+                </p>
+
+                <h4>Please input a decimal number to be converted:</h4>
+                @Html.EditorFor(x => x.NumberToBeConverted)<br />
+                <input type="submit" value="Convert to Binary" name="command" />
+                @*<p>@Html.DisplayFor(x => x.Result)</p>*@
+                <p>@TempData["result"]</p>
+            }
+        </div>
+    </div>
+
+    <!-- User story 8-->
+    <div data-role="collapsible">
+        <h3>User story 8 (B2D)</h3>
+        <div id="story8">
+            @using (Html.BeginForm())
+            {
+                <p>
+                    Use this area to convert any binary number to a decimal number. (B2D)
+                </p>
+
+                <h4>Please input a binary number to be converted:</h4>
+                @Html.EditorFor(x => x.NumberToBeConverted)<br />
+                <input type="submit" value="Convert to Decimal" name="command" />
+                @*<p>@Html.DisplayFor(x => x.Result)</p>*@
+                <p>@TempData["result"]</p>
+            }
         </div>
     </div>
 </div>

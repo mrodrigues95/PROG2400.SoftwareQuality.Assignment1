@@ -10,8 +10,25 @@ namespace MRAssignment1.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        [HttpGet]
+        public ActionResult Index()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(SimpleConversionViewModel model, string command)
+        {
+            if (command == "Convert to Binary") {                
+                model.Result = MRSimpleConversionBL.SimpleConversions.ConvertDecimalToBinary(model.NumberToBeConverted);
+                TempData["result"] = model.Result;
+            }
+            if (command == "Convert to Decimal")
+            {
+                model.Result = MRSimpleConversionBL.SimpleConversions.ConvertDecimalToBinary(model.NumberToBeConverted);
+                TempData["result"] = model.Result;
+            }
+
             return View();
         }
 
